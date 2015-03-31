@@ -66,7 +66,7 @@ class Gallery extends Widget
         if (!isset($this->options['id'])) {
             $this->options['id'] = $this->getId();
         }
-        $this->templateOptions['id'] = ArrayHelper::getValue($this->templateOptions, 'id', 'blueimp-gallery');
+        $this->templateOptions['id'] = ArrayHelper::getValue($this->options, 'id', 'blueimp-gallery');
         Html::addCssClass($this->templateOptions, 'blueimp-gallery');
         if ($this->showControls) {
             Html::addCssClass($this->templateOptions, 'blueimp-gallery-controls');

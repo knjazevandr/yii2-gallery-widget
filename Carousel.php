@@ -33,6 +33,10 @@ class Carousel extends Gallery
         parent::init();
         Html::addCssClass($this->templateOptions, 'blueimp-gallery-carousel');
         $this->clientOptions['carousel'] = true;
+        if (!isset($this->options['id'])) {
+            $this->options['id'] = $this->getId();
+        }
+        $this->clientOptions['container'] = '#' . $this->options['id'];
     }
 
     /**
